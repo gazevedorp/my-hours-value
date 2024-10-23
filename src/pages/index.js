@@ -34,7 +34,7 @@ export default function Home() {
 
   return (
     <div
-      className={`${geistSans.variable} ${geistMono.variable} flex flex-col justify-between items-center justify-items-center min-h-screen p-8 pb-14 pt-14 font-[family-name:var(--font-geist-sans)]`}
+      className={`${geistSans.variable} ${geistMono.variable} flex flex-col justify-between items-center justify-items-center min-h-screen p-8 pb-16 pt-16 font-[family-name:var(--font-geist-sans)]`}
     >
       <h1 className="text-blue-700 text-xl">CÁLCULO DO VALOR DE HORA</h1>
       <form className="flex flex-col justify-between items-center p-0 m-0" onSubmit={handleCalculateHour}>
@@ -59,7 +59,7 @@ export default function Home() {
           </button>
         </div>
       </form>
-      <p>Resultado: <text className="text-blue-700 text-2xl">{hourValue}</text></p>
+      <p>Resultado: <text className="text-blue-700 text-2xl">{hourValue.toFixed(2)}</text></p>
     </div>
   );
 }
