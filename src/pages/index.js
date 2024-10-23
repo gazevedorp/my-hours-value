@@ -59,7 +59,7 @@ export default function Home() {
           </button>
         </div>
       </form>
-      <p>Resultado: <text className="text-blue-700 text-2xl">{hourValue.toFixed(2)}</text></p>
+      <p>Resultado: <text className="text-blue-700 text-2xl">R${hourValue.toFixed(2).replace(".", ",")}</text></p>
     </div>
   );
 }
