@@ -21,7 +21,7 @@ export default function Home() {
   const handleCalculateHour = (e) => {
     e.preventDefault();
     const totalHours = days * hours;
-    const HourValueTemp = totalValue / totalHours
+    const HourValueTemp = totalValue / totalHours;
     setHourValue(HourValueTemp || 0);
   }
 
@@ -34,7 +34,7 @@ export default function Home() {
 
   return (
     <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_280px_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
+      className={`${geistSans.variable} ${geistMono.variable} flex flex-col justify-between items-center justify-items-center min-h-screen p-8 pb-14 pt-14 font-[family-name:var(--font-geist-sans)]`}
     >
       <h1 className="text-blue-700 text-xl">CÁLCULO DO VALOR DE HORA</h1>
       <form className="flex flex-col justify-between items-center p-0 m-0" onSubmit={handleCalculateHour}>
@@ -46,7 +46,7 @@ export default function Home() {
           <label className="block text-sm font-medium text-gray-900 dark:text-white">Dias trabalhadas (Mês)</label>
           <input type="number" value={days} onChange={(e) => setDays(e.target.value)} id="days" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
         </div>
-        <div className="mb-8">
+        <div className="mb-4">
           <label className="block text-sm font-medium text-gray-900 dark:text-white">Salário total</label>
           <input type="number" value={totalValue} onChange={(e) => setTotalValue(e.target.value)} id="total_value" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
         </div>
@@ -59,7 +59,7 @@ export default function Home() {
           </button>
         </div>
       </form>
-      <p>Resultado: <text className="text-blue-700 text-xl">{hourValue}</text></p>
+      <p>Resultado: <text className="text-blue-700 text-2xl">{hourValue}</text></p>
     </div>
   );
 }
